@@ -1,9 +1,6 @@
 package com.t_evolution_Systems.todo_list.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -14,8 +11,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 public class Todo {
-    @id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
     private Long id;
     private String nome;
     private String descricao;
